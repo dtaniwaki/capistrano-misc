@@ -1,0 +1,26 @@
+.rvmrc
+.rspec
+.bundle
+.config
+.ruby-version
+.ruby-gemset
+
+coverage
+vendor
+log
+tmp
+coverage
+spec/tmp
+spec/reports
+
+*emfile.lock
+
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+
+*.gem
+*.rbc
+**.orig
+**.org
