@@ -2,6 +2,6 @@
 
 source "http://rubygems.org"
 
-gem "capistrano", "~> 2.15.0"
+gem "capistrano", "~> 2.0"
 
 gemspec :path=>"../"
