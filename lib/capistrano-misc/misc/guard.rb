@@ -5,6 +5,7 @@ module CapistranoMisc::Misc
         set :guard_env, :production
 
         namespace :misc do
+          desc 'Guard specified env from accidentally execution'
           task :guard do
             env = self.rails_env.to_s
   

@@ -3,6 +3,7 @@ module CapistranoMisc::Misc
     def self.load_into(configuration)
       configuration.load do
         namespace :misc do
+          desc 'Select branch to deploy from console'
           task :branch do
             branch = fetch(:branch, nil)
             next if branch.is_a?(String)
