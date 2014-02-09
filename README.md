@@ -22,7 +22,7 @@ require 'capistrano-misc'
 
 Execute tasks
 ```ruby
-cap misc:log
+cap misc:tailf
 ```
 
 Add task hooks
