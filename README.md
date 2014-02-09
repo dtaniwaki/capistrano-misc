@@ -28,7 +28,10 @@ cap misc:log
 Add task hooks
 ```ruby
 after 'multistage:ensure', 'misc:guard'
+set :guard_env, [:production, :beta] # default :production
+
 before 'deploy:update_code', 'misc:branch'
+set :branch, /upstream.*\/master$/ # default all
 ```
 
 ## Contributing
