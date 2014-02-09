@@ -6,26 +6,26 @@ capistrano-misc provides some useful tasks for Capistrano 2.
 
 ## Installation
 
-To your system
-
+Add the library to your ```Gemfile```
 ```ruby
-gem install capistrano-misc
+group :development do
+  gem 'capistrano-misc', :require => false
+end
 ```
 
-Or add capistrano-misc to your `Gemfile` and `bundle install`:
-
+And load it into your deployment script ```config/deploy.rb```
 ```ruby
-gem 'capistrano-misc'
+require 'capistrano-misc'
 ```
 
 ## Tasks
 
-Execute individual tasks
+Execute tasks
 ```ruby
 cap misc:log
 ```
 
-Add callback tasks in ```config/deploy.rb```
+Add task hooks
 ```ruby
 after 'multistage:ensure', 'misc:guard'
 before 'deploy:update_code', 'misc:branch'
