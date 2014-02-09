@@ -18,5 +18,8 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each{ |f| require f }
 
 RSpec.configure do |config|
   config.color_enabled = true
+  config.before :each do
+    configuration.logger = Capistrano::Logger.new(:output => '/dev/null')
+  end
 end
 
