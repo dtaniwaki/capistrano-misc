@@ -8,7 +8,7 @@ RSpec::Core::RakeTask.new(:spec)
 task :default => [:all]
 
 task :all do
-  Rake::Task['appraisal:install'].invoke
+  Rake::Task['appraisal:install'].execute
   exec('rake appraisal spec')
 end
 
