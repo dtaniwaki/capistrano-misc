@@ -18,7 +18,11 @@ module CapistranoMisc::Misc
   
             if guard
               res = Capistrano::CLI.ui.ask %Q|Do you realy want to deploy to #{rails_env}, yes/no(no)?: |
-              exit unless res =~ /y(es)?/i
+              if res =~ /^(n|no)$/i
+                exit
+              elsif res !~ /^(y|yes)$/i
+                next
+              end
             end
           end
         end

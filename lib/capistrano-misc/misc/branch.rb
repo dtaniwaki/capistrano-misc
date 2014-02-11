@@ -17,7 +17,7 @@ module CapistranoMisc::Misc
             options.concat ['q: Quit']
             while
               s = Capistrano::CLI.ui.ask(%Q|Choose branch from \n#{options.join("\n")}\n or type tag to deploy (make sure to push the tag first): |).strip
-              if s =~ /q(uit)?/i
+              if s =~ /^(q|quit)$/i
                 exit
               elsif s.to_i.to_s != s
                 next
